@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriSummit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <div class="nav-logo"> 
+               <a href="programme.html"><img src="images/logo1.jpeg" alt="AfriConnect Summit 2026" width="100px">AfriConnect<span>Summit-2026</span></a>
+            </div>
+                <ul class="nav-links" id="navlinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="themtoggle" class="btn-theme" aria-label="Changer de theme">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <button id="menuHamburger" class="btn-hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <i class="bi bi-list"></i>
+                    </button>
+                </div>
+        </nav>
+    </header>
+    <main>
+        <!-- HERO INTERNE -->
+        <section class="internal-hero">
+            <h1>Inscription & Contact</h1>
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="index.html">Accueil</a>
+                <i class="bi bi-chevron-right"></i>
+                <span>Contact</span>
+            </nav>
+        </section>
+         <!-- SECTION FORMULAIRE DE CONTACT (Flexbox 2 colonnes) -->
+        <section class="contact-section">
+            <div class="contact-container">
+                
+                <!-- Colonne Gauche : Formulaire -->
+                <div class="contact-form-wrapper">
+                    <h2>S'inscrire à l'événement</h2>
+                    <div id="successMessage" class="alert-success" style="display: none;">
+                        <i class="bi bi-check-circle-fill"></i> Inscription réussie ! Un e-mail de confirmation vous a été envoyé.
+                    </div>
+
+                    <form id="registrationForm" novalidate>
+                        <!-- Nom Complet -->
+                        <div class="form-group">
+                            <label for="fullName">Nom complet *</label>
+                            <input type="text" id="fullName" class="form-control" placeholder="ex: Mamadou Diallo">
+                            <small class="error-text"></small>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Adresse E-mail *</label>
+                            <input type="email" id="email" class="form-control" placeholder="ex: exemple@domaine.com">
+                            <small class="error-text"></small>
+                        </div>
+
+                        <!-- Téléphone -->
+                        <div class="form-group">
+                            <label for="phone">Numéro de Téléphone *</label>
+                            <input type="tel" id="phone" class="form-control" placeholder="ex: +221 77 000 00 00">
+                            <small class="error-text"></small>
+                        </div>
+
+                        <!-- Type de participation -->
+                        <div class="form-group">
+                            <label for="participationType">Type de participation *</label>
+                            <select id="participationType" class="form-control">
+                                <option value="">-- Sélectionnez une option --</option>
+                                <option value="participant">Participant Standard</option>
+                                <option value="vip">Pass VIP & Networking</option>
+                                <option value="student">Étudiant / Chercheur</option>
+                                <option value="press">Presse & Média</option>
+                            </select>
+                            <small class="error-text"></small>
+                        </div>
+
+                        <!-- Pays africain (Min 10 pays) -->
+                        <div class="form-group">
+                            <label for="country">Pays d'origine / de résidence *</label>
+                            <select id="country" class="form-control">
+                                <option value="">-- Sélectionnez votre pays --</option>
+                                <option value="Sénégal">Sénégal</option>
+                                <option value="Guinée">Guinée</option>
+                                <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                                <option value="Mali">Mali</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="Cameroun">Cameroun</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Rwanda">Rwanda</option>
+                                <option value="Maroc">Maroc</option>
+                                <option value="Afrique du Sud">Afrique du Sud</option>
+                            </select>
+                            <small class="error-text"></small>
+                        </div>
+
+                        <!-- Message / Motivation -->
+                        <div class="form-group">
+                            <label for="message">Message / Motivation * (20 caractères min.)</label>
+                            <textarea id="message" rows="4" class="form-control" placeholder="Expliquez brièvement vos attentes pour ce sommet..."></textarea>
+                            <small class="error-text"></small>
+                        </div>
+
+                        <!-- Bouton d'envoi -->
+                        <button type="submit" class="btn btn-primary btn-submit">Confirmer mon inscription</button>
+                    </form>
+                </div>
+
+                <!-- Colonne Droite : Informations pratiques -->
+                <div class="contact-info-wrapper">
+                    <h2>Informations Pratiques</h2>
+                    <p class="info-desc">Vous avez une question spécifique sur les partenariats, la presse ou l'hébergement ? N'hésitez pas à nous contacter directement.</p>
+
+                    <div class="info-cards">
+                        <div class="info-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <div>
+                                <h4>Lieu de l'événement</h4>
+                                <p>Centre International de Conférences, Dakar, Sénégal</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <div>
+                                <h4>Email Général</h4>
+                                <p>contact@africonnect2026.org</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <div>
+                                <h4>Infoline / WhatsApp</h4>
+                                <p>+221 33 800 20 20</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+           <!-- SECTION FAQ (ACCORDÉON CSS PUR) -->
+        <section class="faq-section scroll-anim">
+            <h2 class="section-title">Foire Aux Questions (FAQ)</h2>
+            <div class="faq-accordion">
+                
+                <!-- Q1 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq-1" class="faq-toggle">
+                    <label for="faq-1" class="faq-header">
+                        Comment recevoir mon pass d'accès après inscription ?
+                        <i class="bi bi-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-content">
+                        <p>Dès validation de votre formulaire, un e-mail de confirmation contenant votre QR Code d'accès individuel vous sera envoyé sous 24 heures.</p>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq-2" class="faq-toggle">
+                    <label for="faq-2" class="faq-header">
+                        Des tarifs préférentiels sont-ils prévus pour les étudiants ?
+                        <i class="bi bi-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-content">
+                        <p>Oui, un quota de places à tarif réduit est réservé aux étudiants sur présentation d'une carte d'étudiant valide lors de l'enregistrement.</p>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq-3" class="faq-toggle">
+                    <label for="faq-3" class="faq-header">
+                        Est-il possible de suivre le sommet en distanciel ?
+                        <i class="bi bi-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-content">
+                        <p>Absolument. Toutes les Keynotes de la grande salle seront retransmises en direct streaming HD pour les détenteurs du Pass Digital.</p>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq-4" class="faq-toggle">
+                    <label for="faq-4" class="faq-header">
+                        Quelles sont les opportunités de pitch pour les Startups ?
+                        <i class="bi bi-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-content">
+                        <p>Les sessions de Pitch ont lieu chaque après-midi au Lab Design. Il faut sélectionner l'option 'Pass VIP & Networking' pour soumettre votre dossier.</p>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="faq-item">
+                    <input type="checkbox" id="faq-5" class="faq-toggle">
+                    <label for="faq-5" class="faq-header">
+                        Comment devenir sponsor ou partenaire de l'événement ?
+                        <i class="bi bi-chevron-down faq-icon"></i>
+                    </label>
+                    <div class="faq-content">
+                        <p>Envoyez directement votre demande par e-mail à l'adresse partners@africonnect2026.org et notre équipe vous recontactera sous 48h.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION CARTE GOOGLE MAPS -->
+        <section class="map-section scroll-anim">
+            <h2 class="section-title">Où nous trouver ?</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61775.29778263155!2d-17.4727142!3d14.6937001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1724012013f99%3A0xe541240375837651!2sDakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Carte de localisation de l'événement">
+                </iframe>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+         <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>AfriConnect Summit</h4>
+                <p>Le carrefour de l'écosystème technologique africain en 2026.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens Utiles</h4>
+                <ul>
+                    <li><a href="programme.html">Programme complet</a></li>
+                    <li><a href="intervenants.html">Les Experts</a></li>
+                    <li><a href="contact.html">S'inscrire</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="#" aria-label="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="facebook"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> AfriConnect Summit. Tous droits réservés.</p>
+            <button id="backToTop" class="btn-back-to-top" aria-label="Retour en haut de page">
+                <i class="bi bi-arrow-up-short"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

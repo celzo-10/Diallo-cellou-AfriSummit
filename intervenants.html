@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriSummit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <div class="nav-logo"> 
+               <a href="programme.html"><img src="images/logo1.jpeg" alt="AfriConnect Summit 2026" width="100px">AfriConnect<span>Summit-2026</span></a>
+            </div>
+                <ul class="nav-links" id="navlinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html" class="active">Intervenants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="themtoggle" class="btn-theme" aria-label="Changer de theme">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <button id="menuHamburger" class="btn-hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <i class="bi bi-list"></i>
+                    </button>
+                </div>
+        </nav>
+    </header>
+    <main>
+        <!-- HERO INTERNE & FIL D'ARIANE -->
+         <section class="internal-hero">
+            <h1>Les Intervenants</h1>
+             <nav class="breadcrumb" aria-label="Fil d'ariane">
+                <a href="index.html">Accueil</a> 
+                <i class="bi bi-chevron-right"></i>
+                <span>Intervenants</span>
+            </nav>
+         </section>
+         <!-- FILTRAGE DYNAMIQUE -->
+          <section class="filter-section">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn " data-filter="ia & tech">IA & Tech</button>
+                <button class="filter-btn " data-filter="Bussiness">Business</button>
+                <button class="filter-btn " data-filter="Design">Design</button>
+                <button class="filter-btn " data-filter="Data">Data</button>
+            </div>
+          </section>
+          <!-- GRILLE D'INTERVENANTS (9 cartes au total)-->
+          <section class="speakers-section">
+            <div class="speakers-grid-page">
+                <!-- Card 1 (IA & Tech) -->
+                 <article class="speaker-card-item" data-category="IA & Tech">
+                    <div class="speaker-img-wrapper">
+                        <img src="images/portrait4.jpg" alt="Aminata Diallo" width="300px">
+                    </div>
+                    <h3>Aminata Diallo</h3>
+                    <p class="speaker-role">Experte IA & Science</p>
+                    <span class="speaker-country">Sénégal</span>
+                 </article>
+                  <!-- Card 2 (Business) -->
+                <article class="speaker-card-item" data-category="business">
+                    <div class="speaker-img-wrapper">
+                        <img src="images/portriat6.jpg" alt="Muhamad Mensah" width="300px">
+                    </div>
+                    <h3>Muhamad Mensah</h3>
+                    <p class="speaker-role">Fondateur de Tech Panafricaine</p>
+                    <span class="speaker-country">Ghana</span>
+                </article>
+
+                <!-- Card 3 (Design) -->
+                <article class="speaker-card-item" data-category="design">
+                    <div class="speaker-img-wrapper">
+                        <img src="images/portrait7.jpg" alt="Ibrahima Baldé" width="300px">
+                    </div>
+                    <h3>Ibrahima Baldé</h3>
+                    <p class="speaker-role">UX/UI Designer Principal</p>
+                    <span class="speaker-country">Guinée</span>
+                </article>
+
+                <!-- Card 4 (Data) -->
+                <article class="speaker-card-item" data-category="data">
+                    <div class="speaker-img-wrapper">
+                        <img src="images/portrait8.jpg" alt="Dr. Ousmane Sy" width="300px">
+                    </div>
+                    <h3>Dr. Ousmane Sy</h3>
+                    <p class="speaker-role">Directeur de la Sécurité des Data</p>
+                    <span class="speaker-country">Mali</span>
+                </article>
+
+                <!-- Card 5 (IA & Tech) -->
+                <article class="speaker-card-item" data-category="ia-tech">
+                    <div class="speaker-img-wrapper">
+                        <img src="images/portrait9.jpg" alt="Moussa Fofana" width="300px">
+                    </div>
+                    <h3>Moussa Fofana</h3>
+                    <p class="speaker-role">Architecte Cloud Senior</p>
+                    <span class="speaker-country">Côte d'Ivoire</span>
+                </article>
+
+                <!-- Card 6 (Business) -->
+                <article class="speaker-card-item" data-category="business">
+                    <div class="speaker-img-wrapper">
+                        <img src="images/portrait1.jpg" alt="Mariama Sow" width="300px">
+                    </div>
+                    <h3>Mariama Sow</h3>
+                    <p class="speaker-role">Investisseuse & Partenaire VC</p>
+                    <span class="speaker-country">Sénégal</span>
+                </article>
+
+                <!-- Card 7 (Design) -->
+                <article class="speaker-card-item" data-category="design">
+                    <div class="speaker-img-wrapper">
+                        <img src="images/portrait2.jpg" alt="Fatoumata Barry" width="300px">
+                    </div>
+                    <h3>Fatoumata Barry</h3>
+                    <p class="speaker-role">Product Designer</p>
+                    <span class="speaker-country">France / Guinée</span>
+                </article>
+
+                <!-- Card 8 (Data) -->
+                <article class="speaker-card-item" data-category="data">
+                    <div class="speaker-img-wrapper">
+                        <img src="images/portrait3.jpg" alt="Awa Ndiaye" width="300px">
+                    </div>
+                    <h3>Awa Ndiaye</h3>
+                    <p class="speaker-role">Analyste de données massives</p>
+                    <span class="speaker-country">Mauritanie</span>
+                </article>
+
+                <!-- Card 9 (IA & Tech) -->
+                <article class="speaker-card-item" data-category="ia-tech">
+                    <div class="speaker-img-wrapper">
+                        <img src="images/portrait5.jpg" alt="Joella Tchouapa" width="300px">
+                    </div>
+                    <h3>Joella Tchouapa</h3>
+                    <p class="speaker-role">Consultant Web3 & Blockchain</p>
+                    <span class="speaker-country">Cameroun</span>
+                </article>
+            </div>
+        </section>     
+    </main>
+    <!-- Footer -->
+          <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>AfriConnect Summit</h4>
+                <p>Le carrefour de l'écosystème technologique africain en 2026.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens Utiles</h4>
+                <ul>
+                    <li><a href="programme.html">Programme complet</a></li>
+                    <li><a href="intervenants.html">Les Experts</a></li>
+                    <li><a href="contact.html">S'inscrire</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="#" aria-label="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="facebook"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> AfriConnect Summit. Tous droits réservés.</p>
+            <button id="backToTop" class="btn-back-to-top" aria-label="Retour en haut de page">
+                <i class="bi bi-arrow-up-short"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriSummit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <div class="nav-logo"> 
+               <a href="programme.html"><img src="images/logo1.jpeg" alt="AfriConnect Summit 2026" width="100px">AfriConnect<span>Summit-2026</span></a>
+            </div>
+                <ul class="nav-links" id="navlinks">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html" class="active">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="themtoggle" class="btn-theme" aria-label="Changer de theme">
+                        <i class="bi bi-moon-fill"></i>
+                    </button>
+                    <button id="menuHamburger" class="btn-hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <i class="bi bi-list"></i>
+                    </button>
+                </div>
+        </nav>
+    </header> 
+    <main>
+        <!-- HERO INTERNE -->
+         <section class="internal-hero">
+            <h1>Programme Officiel</h1>
+            <nav class="breadcrumb" aria-label="Fil d'ariane">
+                <a href="index.html">Accueil</a> 
+                <i class="bi bi-chevron-right"></i>
+                <span>Programme</span>
+            </nav>
+         </section>
+         <!-- ONGLETS 3 JOURS -->
+          <section class="schedule-section">
+            <div class="tabs-container">
+                <button  class="tab-btn active" data-day="Day1">Jour 1 . 15 oct</button>
+                <button  class="tab-btn " data-day="Day2">Jour 2 . 16 oct</button>
+               <button  class="tab-btn " data-day="Day3">Jour 3 . 17 oct</button>
+            </div>
+            <!-- Contenu du Planning -->
+               <div class="schedule-content">
+                
+                <!-- PLANNING JOUR 1 -->
+                <div class="tab-panel active" id="day1">
+                    <div class="table-responsive">
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>Session</th>
+                                    <th>Intervenant</th>
+                                    <th>Salle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="time">08:30 - 09:30</td>
+                                    <td class="session-title">Accueil des participants & Enregistrement</td>
+                                    <td>—</td>
+                                    <td>Hall Principal</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">09:30 - 11:00</td>
+                                    <td class="session-title">Keynote d'ouverture : L'avenir de la Tech Africaine</td>
+                                    <td>Aminata Diallo</td>
+                                    <td>Amphi Panafricain</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">11:30 - 13:00</td>
+                                    <td class="session-title">L'essor de l'Intelligence Artificielle Francophone</td>
+                                    <td>Ibrahima Baldé</td>
+                                    <td>Salle Tech</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">14:30 - 16:00</td>
+                                    <td class="session-title">Atelier : Concevoir pour le Mobile-First en Afrique</td>
+                                    <td>Fatoumata Barry</td>
+                                    <td>Lab Design</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">16:30 - 18:00</td>
+                                    <td class="session-title">Financer sa startup : Les clés du capital-risque</td>
+                                    <td>Kwamé Mensah</td>
+                                    <td>Amphi Panafricain</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- PLANNING JOUR 2 -->
+                <div class="tab-panel" id="day2">
+                    <div class="table-responsive">
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>Session</th>
+                                    <th>Intervenant</th>
+                                    <th>Salle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="time">09:00 - 10:30</td>
+                                    <td class="session-title">Souveraineté des données et Cloud sur le continent</td>
+                                    <td>Dr. Ousmane Sy</td>
+                                    <td>Salle Tech</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">11:00 - 12:30</td>
+                                    <td class="session-title">Web3 & FinTech : Révolutionner le transfert de valeur</td>
+                                    <td>Mariama Sow</td>
+                                    <td>Amphi Panafricain</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">14:00 - 15:30</td>
+                                    <td class="session-title">UI/UX : Intégrer les identités culturelles au design</td>
+                                    <td>Fatoumata Barry</td>
+                                    <td>Lab Design</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">16:00 - 17:30</td>
+                                    <td class="session-title">Panel : Éducation Tech, former les talents de demain</td>
+                                    <td>Joel Tchouapa</td>
+                                    <td>Amphi Panafricain</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">17:30 - 19:00</td>
+                                    <td class="session-title">Session Networking & Pitch de startups</td>
+                                    <td>—</td>
+                                    <td>Espace Partenaires</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- PLANNING JOUR 3 -->
+                <div class="tab-panel" id="day3">
+                    <div class="table-responsive">
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Heure</th>
+                                    <th>Session</th>
+                                    <th>Intervenant</th>
+                                    <th>Salle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="time">09:30 - 11:00</td>
+                                    <td class="session-title">Green Tech : La technologie au service du climat</td>
+                                    <td>Awa Ndiaye</td>
+                                    <td>Salle Tech</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">11:30 - 13:00</td>
+                                    <td class="session-title">Cybersécurité : Anticiper les menaces critiques</td>
+                                    <td>Moussa Fofana</td>
+                                    <td>Salle Tech</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">14:30 - 16:00</td>
+                                    <td class="session-title">Product Management dans un écosystème fragmenté</td>
+                                    <td>Aminata Diallo</td>
+                                    <td>Lab Design</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">16:30 - 17:30</td>
+                                    <td class="session-title">Keynote de clôture & Remise des prix du Hackathon</td>
+                                    <td>Comité d'Organisation</td>
+                                    <td>Amphi Panafricain</td>
+                                </tr>
+                                <tr>
+                                    <td class="time">20:00 - 23:00</td>
+                                    <td class="session-title">Dîner de Gala & Clôture officielle</td>
+                                    <td>—</td>
+                                    <td>Grand Hôtel National</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+          </section>
+          <!-- SECTION THÉMATIQUES -->
+           <section class="themes-section scroll anim">
+            <h2 class="section-title">Les Grandes Thématiques</h2>
+            <div class="themes-grid">
+                <div class="theme-box">
+                    <i class="bi bi-cpu"></i>
+                    <h3>IA & Tech</h3>
+                    <p>Exploitation des algorithmes d'inteligence artificielle, du cloud computing et des infrastructures de serveurs adaptés au continent</p>
+                </div>
+                 <div class="theme-box">
+                    <i class="bi bi-graph-up-arrow"></i>
+                    <h3>Bussiness & VC</h3>
+                    <p>Stratégies de levées de fond, développement de bussiness models panafricaine et opportinités d'investissement technologiques.</p>
+                </div>
+                 <div class="theme-box">
+                    <i class="bi bi-palette"></i>
+                    <h3>Design System</h3>
+                    <p>Ateliers de deisgn graphique, d'ergonomie Web, d'accessiblité et de création d'expériences utilisateur mémorables et inclusives
+                        !/p>
+                </div>
+                 <div class="theme-box">
+                    <i class="bi bi-database-lock"></i>
+                    <h3>Data & Sécurité</h3>
+                    <p>Gestion des infrastructures de données massives, RGPD en contexte africain et protection des systemes d'informations critiques.</p>
+                </div>
+            </div>
+           </section>
+    </main>
+    <!-- Footer -->
+         <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>AfriConnect Summit</h4>
+                <p>Le carrefour de l'écosystème technologique africain en 2026.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Liens Utiles</h4>
+                <ul>
+                    <li><a href="programme.html">Programme complet</a></li>
+                    <li><a href="intervenants.html">Les Experts</a></li>
+                    <li><a href="contact.html">S'inscrire</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="#" aria-label="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="facebook"><i class="bi bi-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> AfriConnect Summit. Tous droits réservés.</p>
+            <button id="backToTop" class="btn-back-to-top" aria-label="Retour en haut de page">
+                <i class="bi bi-arrow-up-short"></i>
+            </button>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
