@@ -46,7 +46,7 @@ a{
 .main-header{
     position:sticky;
     top:0;
-    background:#fff;
+    background:#d8572a;
     box-shadow:0 2px 10px rgba(0,0,0,.08);
     z-index:1000;
 }
@@ -64,14 +64,14 @@ a{
 .nav-logo a{
     display:flex;
     align-items:center;
-    gap:12px;
-    color:#000;
+    gap:2px;
+    color:#fff;
     font-weight:bold;
     font-size:22px;
 }
 
 .nav-logo span{
-    color:var(--primary);
+    color:#2563eb;
 }
 
 .nav-links{
@@ -81,14 +81,14 @@ a{
 }
 
 .nav-links a{
-    color:#333;
+    color:#fff;
     font-weight:600;
     transition:.3s;
 }
 
 .nav-links a:hover,
 .nav-links .active{
-    color:var(--primary);
+    color:#2573eb;
 }
 
 .nav-actions{
@@ -106,7 +106,12 @@ a{
     cursor:pointer;
     font-size:20px;
 }
-
+.nav-logo img {
+  border-radius: 8px; /* Ou 50% si tu veux un rond parfait */
+  overflow: hidden;
+  mix-blend-mode: multiply;
+  
+}
 /* ============================
    HERO
 ============================ */
@@ -368,6 +373,7 @@ a{
     margin-top:50px;
     text-align:center;
 }
+
 
 
  /* ==========================================================================
@@ -1187,3 +1193,208 @@ textarea.form-control{
 }
 
 }
+
+/* H2 section-title */
+/* Style du titre de section */
+.section-title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2.5rem; 
+    padding-bottom: 12px; 
+}
+
+/* Trait/Soulignement orange élégant centré sous le titre */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 190px;           
+    height: 4px;            
+    background-color: var(--accent, #ff6b00); 
+    border-radius: 2px;
+}
+/* js.css */
+/* ==========================
+   DARK MODE COMPLET
+========================== */
+
+.dark-mode{
+    background:#0f172a;
+    color:#f8fafc;
+}
+
+.dark-mode body{
+    background:#0f172a;
+}
+
+/* Header */
+.dark-mode .main-header{
+    background:#111827;
+}
+
+.dark-mode .navbar a{
+    color:#fff;
+}
+
+.dark-mode .btn-theme,
+.dark-mode .btn-hamburger{
+    background:#1f2937;
+    color:#fff;
+}
+
+/* Sections */
+.dark-mode .stats-section,
+.dark-mode .why-section,
+.dark-mode .speakers-prewiew-section,
+.dark-mode .schedule-section,
+.dark-mode .themes-section,
+.dark-mode .filter-section,
+.dark-mode .contact-section,
+.dark-mode .faq-section,
+.dark-mode .map-section{
+    background:#0f172a;
+}
+
+/* Cartes */
+.dark-mode .stat-card,
+.dark-mode .feature-card,
+.dark-mode .speaker-card,
+.dark-mode .speaker-card-item,
+.dark-mode .theme-box,
+.dark-mode .contact-form-wrapper,
+.dark-mode .contact-info-wrapper,
+.dark-mode .faq-item{
+    background:#1e293b;
+    color:#fff;
+}
+
+/* Titres et textes */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p,
+.dark-mode span,
+.dark-mode small,
+.dark-mode label,
+.dark-mode li{
+    color:#fff;
+}
+
+/* Hero interne */
+.dark-mode .internal-hero{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+/* Tableau Programme */
+.dark-mode .schedule-table{
+    background:#1e293b;
+    color:#fff;
+}
+
+.dark-mode .schedule-table thead{
+    background:#ca6702;
+}
+
+.dark-mode .schedule-table tbody tr:nth-child(even){
+    background:#263548;
+}
+
+.dark-mode .schedule-table tbody tr:hover{
+    background:#374151;
+}
+
+/* Formulaire */
+.dark-mode .form-control{
+    background:#334155;
+    color:#fff;
+    border:1px solid #475569;
+}
+
+.dark-mode .form-control::placeholder{
+    color:#cbd5e1;
+}
+
+.dark-mode select{
+    background:#334155;
+    color:#fff;
+}
+.dark-mode .contact-info-wrapper p,
+.dark-mode .contact-info-wrapper span,
+.dark-mode .contact-info-wrapper h4,
+.dark-mode .contact-info-wrapper a {
+    color: #0f172a !important;
+}
+
+body.dark-mode .info-desc,
+body.dark-mode p.info-desc {
+    color: #ffffff !important;
+    
+}
+
+/* FAQ */
+.dark-mode .faq-header{
+    color:#fff;
+}
+
+
+.dark-mode .faq-content{
+    background:#1e293b;
+    color:#fff;
+}
+
+/* Footer */
+.dark-mode .main-footer{
+    background:#020617;
+}
+
+/* Boutons */
+.dark-mode .btn-primary{
+    background:#ca6702;
+    color:#fff;
+}
+
+.dark-mode .btn-secondary{
+    border-color:#fff;
+    color:#ca6702;
+}
+
+.dark-mode .btn-outline{
+    border-color:#ca6702;
+    color:#ca6702;
+}
+
+.dark-mode .btn-outline:hover{
+    background:#ca6702;
+    color:#fff;
+}
+/* navbar dynamique */
+.main-header.scrolled{
+    background:#dc2626;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+/* Menu hamburger */
+/* Mobile */
+@media (max-width: 768px) {
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 220px;
+        background: #1f2937;
+        border-radius: 10px;
+        padding: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
