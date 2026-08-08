@@ -50,3 +50,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+// ==============================
+// ANIMATION AU SCROLL
+// ==============================
+
+const elements = document.querySelectorAll(".scroll-anim");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+
+    });
+
+}, {
+    threshold: 0.2
+});
+
+elements.forEach(element => {
+    observer.observe(element);
+});
+
+// ==============================
+// ONGLETS PROGRAMME
+// ==============================
+
+const tabs = document.querySelectorAll(".tab-btn");
+const panels = document.querySelectorAll(".tab-panel");
+
+tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        // Retirer active
+        tabs.forEach(btn => btn.classList.remove("active"));
+        panels.forEach(panel => panel.classList.remove("active"));
+
+        // Ajouter active au bouton
+        tab.classList.add("active");
+
+        // Afficher le bon jour
+        const day = tab.dataset.day.toLowerCase();
+
+        document.getElementById(day).classList.add("active");
+
+    });
+
+});
