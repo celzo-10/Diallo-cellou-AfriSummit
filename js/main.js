@@ -169,10 +169,6 @@ if (
     setInterval(updateCountdown, 1000);
 }
 
-
-
-
-
 // ==============================
 // ONGLETS PROGRAMME
 // ==============================
@@ -253,6 +249,8 @@ filterButtons.forEach(button => {
 // Validation du formulaire
 const form = document.getElementById("registrationForm");
 const successMessage = document.getElementById("successMessage");
+
+if (form && successMessage)  {
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -356,6 +354,8 @@ form.addEventListener("submit", function (event) {
 });
 
 
+}
+
 // ===============================
 // FONCTION POUR AFFICHER UNE ERREUR
 // ===============================
@@ -368,5 +368,38 @@ function afficherErreur(input, message) {
 
     errorText.textContent = message;
 }
+// button retour en haut
+const backToTop = document.getElementById("backToTop");
+
+if (backToTop) {
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY >= 300) {
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+
+    });
+
+    backToTop.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
+
+// année dynamique du footer
+const currentYear = document.getElementById("currentYear");
+
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
+
 
 
